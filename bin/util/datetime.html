@@ -1,0 +1,291 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>选择日期</title>
+<style>
+  td {font-size:12px; cursor:pointer}
+  .td1 {border:1px #CCC solid;
+        text-align:center;
+		background-color:#FFF}
+  .td11 {border:1px #CCC solid;
+        text-align:center;
+		background-color:#eee}
+  .td2 {text-align:center;}
+  .td3 {border:1px #CCC solid;
+        text-align:center;
+		background-color:#FFF}
+  .tdsel3 {border:1px #00F solid;
+        text-align:center;
+		background-color:#03F;
+		color:#FFF}
+  .td4 {border:1px #CCC solid;
+        text-align:center;
+		background-color:#FFF}
+</style>
+<script>
+  //检查年度是否是闰年 
+  function isLeapYear(year) {
+    return (new Date(year, 2, 0).getDate() == 29)? 1:0;
+  }
+
+  
+  var origInp = null;
+  var objInpLength = [4,2,2,2,2,2];
+  var objInpIndex = 0;
+  
+  function doSelInp(sender,nIndex){
+	if(origInp!=null&&origInp!=sender)
+	  origInp.className = "td3";  
+	origInp = sender;
+	origInp.className = "tdsel3";   
+	objInpIndex = nIndex; 
+  }
+  
+  function doClickNum(sender){
+	var inpNum = sender.innerText;
+	var vLen = objInpLength[objInpIndex];
+	var inpV = origInp.innerText;
+	if(vLen==4){
+	  if(inpV.length==4)
+	    origInp.innerText = inpNum;
+      else
+	    origInp.innerText = origInp.innerText+inpNum;		 	
+	}else{
+      if(inpV.length==2)
+	    origInp.innerText = inpNum;
+      else
+	    origInp.innerText = origInp.innerText+inpNum;		
+	}
+  }
+  
+  function doAddDate(noff,nAtt){
+	var y = parseInt(labelYear.innerText,10);
+	var m = parseInt(labelMonth.innerText,10);
+	var d = parseInt(labelDay.innerText,10);
+	var oy = y;
+	
+	switch(nAtt){
+	  case 0:y += noff;
+	         if(isLeapYear(oy)&&d==29)
+			   d = 28;
+	         break;
+	  case 1:m += noff;
+	         if(m==13){
+				y++;
+				m=1;
+			 }else{
+			   if(m==0){
+				 y--;
+				 m=12;   
+			   }else
+			    if(m==2&&d>28+isLeapYear(oy))
+				  d = 28+isLeapYear(oy);
+			 }
+	         break;
+	  case 2:d += noff;
+	         if(d==0){
+				m--;
+				if(m==0){
+				  y--;
+				  m=12;
+				  d=31;	
+				}else
+				  switch(m){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10: d = 31;
+					          break;
+			        case 4:
+					case 6:
+					case 9:
+					case 11: d = 30;
+					          break;
+					case 2:  d = 28+isLeapYear(y);
+					          break;		    
+				  }
+			 }else{
+			  switch(m){
+					case 1:
+					case 3:
+					case 5:
+					case 7:
+					case 8:
+					case 10: 
+					case 12: if(d>31){
+					            m++;
+								d=1;
+								if(m>12){
+								  m = 1;
+								  y ++;
+								}
+					          }
+					          break;
+			        case 4:
+					case 6:
+					case 9:
+					case 11: if(d>30){
+						        m++;
+								d=1;
+					          }
+					          break;
+					case 2:  if(d > 28+isLeapYear(y)){
+						        m++;
+						        d=1;
+					          }
+					          break;		    
+				  }
+			 }
+	         break;
+	}
+    
+	var ddate = new Date(y,m-1,d);
+	m = ddate.getMonth()+1;
+	d = ddate.getDate();
+	labelYear.innerText = ddate.getFullYear();
+	labelMonth.innerText = (m>9)? m:"0"+m;
+	labelDay.innerText = (d>9)? d:"0"+d;
+  }
+  
+  function doOk(){
+	var y = parseInt(labelYear.innerText,10);
+	var m = parseInt(labelMonth.innerText,10);
+	var d = parseInt(labelDay.innerText,10);
+	
+	var h = parseInt(labelHour.innerText,10);
+	var n = parseInt(labelMinute.innerText,10);
+	var s = parseInt(labelSecond.innerText,10);
+	
+	var rq = labelYear.innerText+"."+labelMonth.innerText+"."+labelDay.innerText+" "+
+	          labelHour.innerText+":"+labelMinute.innerText+":"+labelSecond.innerText;
+	
+	if(y<1900||y>2999||m>12||m<=0||d<=0||h>23||h<0||n>59||n<0||s>59||s<0){
+	  alert("日期不正确("+rq+")0");
+	  return; 	
+	}
+
+	switch(m){
+	  case 1:
+	  case 3:
+	  case 5:
+	  case 7:
+	  case 8:
+	  case 10:
+	  case 12: if(d>31){
+		          alert("日期不正确("+rq+")1");
+	              return;
+	            }
+				break;
+	  case 4:
+	  case 6:
+	  case 8:
+	  case 11: if(d>30){
+		          alert("日期不正确("+rq+")2");
+	              return;
+	            }	
+				break;
+	  case 2: 	if(d>28+isLeapYear(y)){
+		          alert("日期不正确("+rq+")3");
+	              return;
+	            }
+				break;
+	}
+	
+	var rq = y+"."+(m+100).toString().substring(1,3)+"."+(d+100).toString().substring(1,3)+" "+
+	          (h+100).toString().substring(1,3)+":"+(n+100).toString().substring(1,3)+":"+
+			  (s+100).toString().substring(1,3);
+
+	this.parent.$GlobalCallBack(true,null,rq);
+  }
+  
+  function doCancel(){
+	this.parent.$GlobalCallBack(false,null,"");  
+  }
+  
+  function doLoad(){
+	var v = this.parent.$GlobalGetDefaultValue();
+    var objs = [labelYear,labelMonth,labelDay];
+
+	var rq = v[0];
+	origInp = objs[v[1]];
+	objInpIndex = 2;
+	
+	origInp.className = "tdsel3";
+	labelYear.innerText = rq.substring(0,4);
+	labelMonth.innerText = rq.substring(5,7);
+	labelDay.innerText = rq.substring(8,10);  
+	
+	labelHour.innerText = rq.substring(11,13);
+	labelMinute.innerText = rq.substring(14,16);
+	labelSecond.innerText = rq.substring(17,19); 
+  }
+</script>
+</head>
+<body onLoad="doLoad();" bgcolor="#eeeeff">
+<table width="200" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="32"><table width="100%" height="100%" border="0" cellspacing="2" cellpadding="0">
+      <tr>
+        <td class="td3" id="labelYear" onClick="doSelInp(this,0);">2015</td>
+        <td width="20" class="td2">年</td>
+        <td width="36" class="td3" id="labelMonth" onClick="doSelInp(this,1);">11</td>
+        <td width="20" class="td2">月</td>
+        <td width="36" class="td3" id="labelDay" onClick="doSelInp(this,2);">15</td>
+        <td width="20" class="td2">日</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="32"><table width="100%" height="100%" border="0" cellspacing="2" cellpadding="0">
+      <tr>
+        <td class="td3" id="labelHour" onClick="doSelInp(this,0);">00</td>
+        <td width="20" class="td2">时</td>
+        <td width="36" class="td3" id="labelMinute" onClick="doSelInp(this,1);">00</td>
+        <td width="20" class="td2">分</td>
+        <td width="36" class="td3" id="labelSecond" onClick="doSelInp(this,2);">00</td>
+        <td width="20" class="td2">秒</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="160"><table width="100%" border="0" height="100%" cellspacing="2" cellpadding="0">
+      <tr>
+        <td width="25%" class="td1" onClick="doClickNum(this)">1</td>
+        <td width="25%" class="td1" onClick="doClickNum(this)">2</td>
+        <td width="25%" class="td1" onClick="doClickNum(this)">3</td>
+        <td width="25%" class="td1" onClick="doClickNum(this)">0</td>
+      </tr>
+      <tr>
+        <td class="td1" onClick="doClickNum(this)">4</td>
+        <td class="td1" onClick="doClickNum(this)">5</td>
+        <td class="td1" onClick="doClickNum(this)">6</td>
+        <td class="td11"onClick="doAddDate(-1,2)">上一日</td>
+      </tr>
+      <tr>
+        <td class="td1" onClick="doClickNum(this)">7</td>
+        <td class="td1" onClick="doClickNum(this)">8</td>
+        <td class="td1" onClick="doClickNum(this)">9</td>
+        <td class="td11"onClick="doAddDate(-1,2)">下一日</td>
+      </tr>
+      <tr>
+        <td class="td11" onClick="doAddDate(-1,1)">上一月</td>
+        <td class="td11" onClick="doAddDate(1,1)">下一月</td>
+        <td class="td11" onClick="doAddDate(-1,0)">上一年</td>
+        <td class="td11" onClick="doAddDate(1,0)">下一年</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="32" align="center"><table width="120" border="0" height="100%" cellspacing="2" cellpadding="0">
+      <tr>
+        <td align="center" class="td4" onClick="doOk();">确定</td>
+        <td width="16" align="center">&nbsp;</td>
+        <td align="center" class="td4" onClick="doCancel();">取消</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

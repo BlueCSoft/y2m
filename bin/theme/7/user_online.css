@@ -1,0 +1,44 @@
+.bodycolor {font-size:9pt; background: #E7F1F8; background-image:none;margin: 0px; padding: 0px;}
+
+#body{
+   width:100%;
+   border-left:1px #b8d1e2 solid;
+   border-right:1px #b8d1e2 solid;
+   border-bottom:1px #b8d1e2 solid;
+   font-size:9pt;
+}
+
+#bottom{
+   height:10px;
+}
+
+.moduleContainer{
+   background: #FFFFFF;
+}
+.moduleContainer table{
+   border:0px;
+}
+#nav_menu {
+   margin: 0;
+   background: #e3eef2 url("list_hd_bg.png") repeat-x scroll left top;
+   border-bottom: 1px #b8d1e2 solid;
+}
+
+#nav_menu li {
+   margin: 0;
+   padding: 0;
+   display: inline;
+   list-style-type: none;
+}
+
+#nav_menu a:link, #nav_menu a:visited {
+   color:#654125;
+   height:25px;
+   padding: 9px 6px 6px 6px;
+   text-decoration: none;
+}
+
+#nav_menu a:link.active, #nav_menu a:visited.active, #nav_menu a:hover {
+   color: #000;
+   font-weight:bold;
+}

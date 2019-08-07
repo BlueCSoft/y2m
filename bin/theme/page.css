@@ -1,0 +1,503 @@
+<!-- 通用 -->
+v\:* { BEHAVIOR: url(#default#VML) }
+
+form {
+  margin:0px
+}
+
+pre{
+       margin:0px;
+}
+
+
+<!-- 标签 -->
+.labelborder
+{
+	border-left: solid 1px #F1F1F1;
+	border-top: solid 1px #F1F1F1;
+	border-bottom: solid 1px #777777;
+	border-right: solid 1px #777777;
+        color:#555555;
+}
+.spanlink
+{
+ 	color:#0000FF;
+    cursor:hand;
+}
+.spanlinkg
+{
+       cursor:hand;
+       text-decoration:underline;
+}
+
+<!-- 链接 -->
+a.tree:link {
+	font-size: 13px;
+	color: #006600;
+	text-decoration: none;
+}
+a.tree:visited {
+	font-size: 13px;
+	color: #006600;
+	text-decoration: none;
+}
+a.tree:hover {
+	font-size: 13px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a.tree:active {
+	font-size: 13px;
+	color: #FF0000;
+}
+
+
+<!-- 表格 -->
+
+.table {
+	font-size: 13px;
+	BORDER-COLLAPSE: collapse;
+}
+
+.tabletop {
+	font-size: 13px;
+	BORDER-COLLAPSE: collapse;
+	border-top-color:#000000;
+	border-bottom-color:#000000;
+	border-left-color:#000000;
+	border-right-color:#000000;
+}
+
+.tdmenutop {
+	background-image:url(../images/AddInfoMainTitleBg.jpg);
+}
+.textmenutop {
+	font-size: 13px;
+	color: #FFFFFF;
+	padding-left:4px;
+	background-image:url(../images/AddInfoMainTitleBg.jpg);
+}
+
+.textmenutop {
+	font-size: 13px;
+	color: #FFFFFF;
+	padding-left:4px;
+	background-image:url(../images/AddInfoMainTitleBg.jpg);
+}
+
+.ccyhdtable {
+	font-size: 13px;
+	BORDER-COLLAPSE: collapse;
+	text-indent: 4px;
+}
+
+<!-- 输入 -->
+
+.textinput {
+	font-size: 13px;
+}
+
+.select1 {
+	font-size: 14px;
+	margin-right: 1px;
+	padding-top: 2px;
+	height: 25px;
+}
+
+.textinputquery {
+	font-size: 13px;
+	color:#000066;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 1px solid #999999;
+	background: transparent;
+}
+
+.textinputautow {
+	font-size: 13px;
+	color:#000066;	
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 1px solid #999999;
+	background: transparent;
+	width:100%;
+}
+
+.textinputautown {
+	font-size: 13px;
+	color:#000066;	
+	border: 0px;
+	background: transparent;
+	width:100%;
+}
+
+.textreadonly {
+	font-size: 13px;
+	color:#000066;	
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom:  1px solid #999999;
+	width:100%;
+	height:21px;
+	padding:2px;
+}
+
+.textinputquery_0 {
+	font-size: 13px;
+	color:#000066;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	background: transparent;
+}
+.textinputautow_0 {  
+	font-size: 13px;
+	color:#000066;	
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	background: transparent;
+	width:100%;
+}
+
+.textreadonly_0 {
+	font-size: 13px;
+	color:#000066;	
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom:  0px;
+	background: transparent;	
+	width:100%;
+}
+
+.radioreadonly {
+	font-size: 13px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	background:#EEEEEE;
+}
+
+.checkreadonly {
+	font-size: 13px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 0px;
+	background:#EEEEEE;
+}
+
+.inputtext   { font-size: 13px;
+               color: #000000;
+               background-color: white;
+               border:1px solid;
+               padding: 1px 0px 0px 2px;
+               margin: 0px 0px 0px 0px}
+			   
+.inputborder   { font-size: 14px;
+               color: #000000;
+               background-color: white;
+               border:1px solid #ccc;
+			   height:30px;
+               padding: 5px 5px 5px 5px;
+               margin: 0px 0px 0px 0px}
+
+.inputborderhtml5   { font-size: 14px;
+               color: #000000;
+               background-color: white;
+               border:1px solid #ccc;
+			   height:19px;
+               padding: 5px 5px 5px 5px;
+               margin: 0px 0px 0px 0px}
+
+.inputborderhtml5x   { font-size: 14px;
+               color: #000000;
+               background-color: white;
+               border:1px solid #ccc;
+			   height:30px;
+               padding: 5px 5px 5px 5px;
+               margin: 0px 0px 0px 0px}
+			   
+.inputbutton5x   { font-size: 14px;
+               color: #000000;
+			   background-color: #eee;
+               border:1px solid #ccc;
+			   height:30px;
+               padding: 5px 5px 5px 5px;
+               margin: 0px 0px 0px 0px}
+			   
+.textareaborderhtml5x   { font-size: 14px;
+               color: #000000;
+               background-color: white;
+               border:1px solid #ccc;
+               padding: 5px 5px 5px 5px;
+               margin: 0px 0px 0px 0px}
+			   
+.queryinput{
+		   font-size:13px; 
+		   border:1px #999 solid; 
+		   padding:3px; 
+		   height:25px
+}
+			   
+.imageborder   { 
+               border:1px solid #ccc;
+               padding: 0px 0px 0px 0px;
+               margin: 0px 0px 0px 0px}
+.textinput {
+	font-size: 13px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top: 0px;
+	border-bottom: 1px solid #888888;
+	background: transparent;
+}
+.readonlytd {
+	font-size: 13px;
+	background: transparent;
+}
+
+
+<!-- DBGrid -->
+
+.dbgridfixedcell{	
+       padding:2px 2px 0px 0px;
+	   border-top:1px solid #aaaaaa;
+	   border-right:1px solid #cccccc;
+	   border-bottom:1px solid #cccccc;
+	   border-left:0px solid #ffffff;	   
+	   font-size:13px;
+	   color:#666;
+	   }      
+	   
+.dbgridfixedcellnew{	
+       padding:2px 2px 0px 0px;
+	   border-top:1px solid #cccccc;
+	   border-right:1px solid #cccccc;
+	   border-bottom:1px solid #cccccc;
+	   border-left:0px solid #ffffff;	   
+	   font-size:13px;
+	   color:#666;
+	   background-color:#f8f8f8
+	   }
+	   
+.dbgridtitlecell{	
+       padding:2px 2px 2px 0px;
+	   border-top:1px solid #ffffff;
+	   border-right:1px solid #cccccc;
+	   border-bottom:1px solid #cccccc;
+	   border-left:0px solid #ffffff;	   
+	   font-size:13px;
+	   background-color:#f8f8f8	   
+	   }      	   
+
+.dbgridgroupcell{	
+       padding:0px 0px 0px 0px;
+	   border-top:1px solid #ffffff;
+	   border-right:1px solid #aaaaaa;
+	   border-bottom:1px solid #aaaaaa;
+	   border-left:1px solid #ffffff;	   
+	   font-size:13px;
+	   filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#e6e6e6,endColorStr=#f3f3f3);
+	   }      	   
+	   
+.dbgridtotalfixed{	
+	   border:1px solid #aaaaaa;
+	   filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#cccccc,endColorStr=#eeeeee);
+	   }   
+	   
+.dbgridfixedcell1{	
+       padding:2px 2px 2px 2px;
+	   font-size:13px;
+}      
+
+.dbgridtitlecell1{	
+       padding:2px 2px 2px 2px;
+	   font-size:13px;
+	   font-weight:bold;
+	   color:#990000;
+	   text-indent:4px;
+	   filter:progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#ddddff,endColorStr=#eeeeff);   
+}      
+
+.dbgridcell{
+      padding:2px 2px 2px 3px;
+	  overflow:hidden;
+      position:absolute;
+	  font-size:13px;
+	  color:#FFFFFF;
+	  border-right:1px solid #CCCCCC;
+	  background:#ecf6f7;
+}
+
+.dbgridccbox{ padding:0 0 0 0;
+       width:14px;
+	   height:13px;
+	   position:absolute;
+	   left:10px;
+	   top:2px;
+}
+
+.dbgridtotalcell{
+      padding:2px 2px 2px 3px;
+	  overflow:hidden;
+	  font-size:13px;
+      background-color:#ffffff;
+	  border-top:1px solid #ccc;
+	  border-right:1px solid #ccc;
+	  display:-moz-inline-box; 
+      display:inline-block; 
+}
+
+.button_navigate {
+	margin-right: 1px;
+	padding-top: 0px;
+	height: 24px; 
+	width: 48px;
+	border: 1px solid #7D959F;
+	font-size: 13px;
+	color:#555;	
+	cursor:pointer;
+}
+
+.span_navigate{
+	font-size: 13px;
+	color:#555;	
+	border:1px #999 solid;
+	height:24px;
+	margin-right: 1px;
+	padding-top: 2px;
+}
+
+.qrgridtitlecell{
+	font-size: 13px;
+	background-color:#f8f8f8
+}
+
+.qrgridcell{
+	font-size: 13px;
+}
+
+.panel-title0{
+	font-size:13px; font-weight:bold; color:#555;
+}
+
+.imagedefault{
+    border:1px solid #CCC;
+	border-radius:5px;
+}
+
+.rtable{
+    word-break:break-all;
+	word-wrap:break-word;
+	table-layout:fixed;
+}
+
+.mytable_fixed{
+    overflow: hidden;
+	display: flex;
+    width: 100%;
+	flex-direction: column;
+}
+
+.mytable_fixedHeaderColumn,.mytable_header_left{
+    float:left;
+    overflow: hidden;
+}
+
+.mytable_fixedColumn{
+    float:left;
+	overflow: auto;
+	overflow-x:hidden;
+}
+
+
+.mytable_conentent{
+    float:left;
+    overflow: auto;
+}
+
+.mytable_header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+	overflow: hidden;
+	height:100%;
+	border-bottom: 0px solid #cccccc;
+	box-sizing: border-box;
+	background-color: #1e83c9;
+}
+
+.mytable_container{ 
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+	overflow: hidden;
+	height:100%;
+	border-bottom: 0px solid #cccccc;
+	box-sizing: border-box;
+	flex:1
+}
+		
+.queryop{
+    z-index:1000;
+	display:none; 
+	position:absolute;
+	width:100%;
+	height:200px; 
+	top:36px;
+	filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75)
+}
+
+.dialogWindow{
+    width:100%;
+	z-index:100;
+	height:100%;
+	position:absolute;
+	top:0px;
+}
+
+.dialogMarkLayer{
+    position:absolute;
+    top:0;
+    opacity:0.6;
+    left:0;
+    width:100%;
+    height:100%;
+	filter:progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75);
+	background-color:#888;
+	z-index:101
+}
+
+.dialogBody{
+    border:1px solid  #069;
+	overflow:hidden;
+	position:absolute;
+	align:center;
+	top:0px; 
+	z-index:102;
+	border-radius:10px;
+	background-color:#069;
+	box-shadow: 0 2px 3px -1px #333;
+}
+
+.dialogTitle{
+    height:100%; 
+	width:100%; 
+	background-color:#069; 
+	text-align:center; 
+	padding:5px;
+	padding-right:10px;
+	color:#fff
+}
+
+.spanr { padding:3px }
+.fsize14 {font-size:14px}
+.fsize13 {font-size:13px}

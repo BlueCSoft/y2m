@@ -1,0 +1,11 @@
+/* CSS Document */
+.celltext{overflow:hidden;
+          position:absolute;
+		  border: 0px solid;
+		  padding:1px 1px 1px 1px}
+.ccbox{ padding:0 0 0 0;
+       width:14px;
+	   height:13px;
+	   position:absolute;
+	   left:10px;
+	   top:2px;}

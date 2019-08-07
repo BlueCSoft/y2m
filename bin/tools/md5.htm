@@ -1,0 +1,63 @@
+  
+
+
+
+<!DOCTYPE html>
+<head>
+<title>MD5加密</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link rel="stylesheet" href="../theme/bootstrap.min.css">
+<link href="../theme/page.css" rel="stylesheet" type="text/css">
+
+<script src="../js/xmlhttp.js"></script>
+<script src="../js/db.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<script language="javascript">
+
+function doCall(){   
+  var jv = __xmlHttp.requestPageExA("md5.jsp",["inp_in="+inp_in.value]);
+  SRESULT.value = jv;
+}
+
+
+</script>
+
+
+</head>
+<body>
+<table width="640" border="0" height="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="28" align="center">MD5加密</td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="120" height="32" align="center">待加密字符串</td>
+        <td><input name="inp_in" type="text" class="form-control" id="inp_in"></td>
+      </tr>
+      <tr>
+        <td height="16" colspan="2"></td>
+      </tr>
+      <tr>
+        <td height="32" align="center">加密后的MD5</td>
+        <td><input name="SRESULT" type="text" class="form-control" id="SRESULT"></td>
+        </tr>
+      <tr>
+        <td height="16" colspan="2"></td>
+      </tr>
+      <tr>
+        <td height="32" colspan="2" align="center">
+          <button name="btSave" class="btn btn-primary btn-sm" onClick="doCall();">
+          <span class="glyphicon glyphicon-ok"></span> 提 交</button>
+        </td>
+        </tr>
+    </table></td>
+    <td valign="top" style="padding:1px">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
+

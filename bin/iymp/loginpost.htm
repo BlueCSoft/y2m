@@ -1,0 +1,86 @@
+  
+
+
+
+<html>
+<head>
+<title>收款员登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="../theme/neiye.css" rel="stylesheet" type="text/css">
+<link href="../theme/page.css" rel="stylesheet" type="text/css">
+<script src="../js/xmlhttp.js"></script>
+<script src="../js/db.js"></script>
+
+<script language="javascript">
+
+function doCall(){   
+  form1.submit();	
+}
+
+</script>
+
+
+</head>
+<body>
+<form name="form1" action="login.jsp" method="post" enctype="application/x-www-form-urlencoded">
+<table width="1000" border="0" height="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="280" height="28" align="center">收款员登录</td>
+    <td width="3px"></td>
+    <td align="center">返回结果</td>
+    <td align="center">接口说明</td>
+  </tr>
+  <tr>
+    <td valign="top">
+     <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="80" height="28" align="center">收款员号</td>
+        <td><input name="cashierid" type="text" class="textinputautow2" id="cashierid" value="00947001"></td>
+      </tr>
+      <tr>
+        <td height="28" align="center">收款员密码</td>
+        <td><input name="pwd" type="text" class="textinputautow2" id="pwd" value="00947001"></td>
+      </tr>
+      <tr>
+        <td height="28" align="center">二维码</td>
+        <td><input type="text" name="barcode" class="textinputautow2" id="barcode"></td>
+      </tr>
+      <tr>
+        <td height="28" align="center">终端号</td>
+        <td><input name="counterid" type="text" class="textinputautow2" id="counterid" value="010A1"></td>
+      </tr>
+      <tr>
+        <td height="48" colspan="2" align="center" style="color:#999">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="32" colspan="2" align="center"><input name="btOk" type="button" class="button_b5" id="btOk" value="提交"
+        onClick="doCall();"></td>
+      </tr>
+    </table>
+    
+    </td>
+    <td></td>
+    <td valign="top" style="padding:1px" width="320"><textarea name="SRESULT" cols="45" rows="10" class="textinputautow2" style="height:100%" id="SRESULT"></textarea></td>
+    <td valign="top" style="padding:2px;"><div style="width:100%;height:100%; border:1px #555 solid;padding:8px;"><pre><p>地址:http://101.200.196.21/gmp/bin/mobileiface/login.jsp<br>
+参数:
+counterid 终端号(专柜号),<br>cashierid 收银员号,<br>pwd 密码,<br>barcode 二维码
+
+<span style="color:#666">收银员号+密码和二维码至少输入一个。</span><br><br>返回:<br>{
+  &quot;time&quot;:&quot;2016-09-28 11:39:38&quot;,<br>  &quot;storeid&quot;:&quot;0001&quot;,<br>&nbsp;&quot;counterid&quot;:&quot;010A1&quot;,<br>&nbsp;&quot;cashierid&quot;:&quot;00947001&quot;,<br>&nbsp;&quot;code&quot;:&quot;1&quot;,<br>&nbsp;&quot;msg&quot;:&quot;sucess&quot;<br>&nbsp;&quot;sub_code&quot;:&quot;1&quot;,<br>&nbsp;&quot;sub_msg&quot;:&quot;ok&quot;,<br>&nbsp;&quot;cashier&quot;:&quot;收款员1&quot;,<br>}      
+<br>返回说明:
+  storeid   : 门店号,<br>  counterid : 终端号,<br>  cashierid : 收银员号,<br>  code      : 网络协议代码 1成功，0失败<br>  msg       : 网络异常信息<br>  sub_code  : 业务代码 1成功，0失败<br>  sub_msg   : 业务处理异常信息,<br>  cashier   : 成功时为收银员名称
+  time      : 服务器时间</p></pre>
+    </div>
+</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+    <td></td>
+    <td valign="top" style="padding:1px">&nbsp;</td>
+    <td valign="top" style="padding:8px">&nbsp;</td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
+

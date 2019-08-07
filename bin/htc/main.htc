@@ -1,0 +1,13 @@
+<public:attach event=onmouseover onevent = "change1()"/>
+<public:attach event=onmouseout onevent = "change2()"/>
+<script language="javascript">
+ function change1(){
+  element.style.textDecoration = "underline";
+  element.oldcolor = element.style.color;
+  element.style.color = "#0000ff";
+ }
+ function change2(){
+  element.style.textDecoration = "";
+  element.style.color = element.oldcolor;  
+ }
+</script>

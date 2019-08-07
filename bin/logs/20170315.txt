@@ -1,0 +1,24 @@
+2017-03-15 23:42:17
+(E):
+ Io exception: The Network Adapter could not establish the connection
+
+2017-03-15 23:45:17
+(E):
+ Io exception: The Network Adapter could not establish the connection
+
+2017-03-15 23:48:35
+(E):
+ Io exception: The Network Adapter could not establish the connection
+
+2017-03-15 23:51:20
+(E):
+ Io exception: The Network Adapter could not establish the connection
+
+2017-03-15 23:54:20
+(E):
+ Io exception: The Network Adapter could not establish the connection
+
+2017-03-15 23:57:20
+(E):
+ Io exception: The Network Adapter could not establish the connection
+

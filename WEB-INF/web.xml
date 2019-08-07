@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">  
+  <!-- Example filter to set character encoding on each request -->  
+  <servlet> 
+    <servlet-name>applyupdate</servlet-name>  
+    <servlet-class>bluec.base.servlet.ApplyUpdate</servlet-class> 
+  </servlet>  
+  <servlet-mapping> 
+    <servlet-name>applyupdate</servlet-name>  
+    <url-pattern>/bin/util/applyupdate</url-pattern> 
+  </servlet-mapping>  
+  <listener> 
+    <listener-class>bluec.base.CAppListener</listener-class> 
+  </listener>  
+  <context-param> 
+    <param-name>connectstr</param-name>  
+    <param-value>java:comp/env/jdbc/y2m</param-value>  
+    <!--java:comp/env/--> 
+  </context-param>  
+  <context-param> 
+    <param-name>erplink</param-name>  
+    <param-value>java:comp/env/jdbc/yerp</param-value>  
+  </context-param>    
+  <context-param> 
+    <param-name>viplink</param-name>  
+    <param-value>java:comp/env/jdbc/yvip</param-value>  
+  </context-param>  
+  <context-param> 
+    <param-name>printtrack</param-name>  
+    <param-value>yes</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>rlogins</param-name>  
+    <param-value>yes</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>rpageinfo</param-name>  
+    <param-value>yes</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>webapptype</param-name>  
+    <param-value>tomcat</param-value>  
+    <!--tomcat websphere --> 
+  </context-param>  
+  <context-param> 
+    <param-name>charset-s</param-name>  
+    <param-value>ISO8859-1</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>charset-d</param-name>  
+    <param-value>GBK</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>databasetype</param-name>  
+    <param-value>0</param-value>  
+    <!--0-oracle 1-mssql --> 
+  </context-param>  
+  <context-param> 
+    <param-name>vroot</param-name>  
+    <param-value>/bin/docfile/</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>dlfpath</param-name>  
+    <param-value>/bin/docfile/</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>filepath1</param-name>  
+    <param-value>/bin/docfile/</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>filepath2</param-name>  
+    <param-value>/bin/docfile/</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>recordstep</param-name>  
+    <param-value>yes</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>safefield</param-name>  
+    <param-value>isLogin</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>safefieldvalue</param-name>  
+    <param-value>sDealerId</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>salcache</param-name>  
+    <param-value>false</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>appid</param-name>  
+    <param-value>0F01</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>taskatt</param-name>  
+    <param-value>-1</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>taskdelay</param-name>  
+    <param-value>60000</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>taskperiod</param-name>  
+    <param-value>60000</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>tasktime</param-name>  
+    <param-value/> 
+  </context-param>  
+  <context-param> 
+    <param-name>xmlcr</param-name>  
+    <param-value>no</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>checkcode</param-name>  
+    <param-value>no</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>loginsql</param-name>  
+    <param-value>select userid gUserId,usercode gUserCode,usercode gLoginCode,username gUserName,psid gpsid, to_char(sysdate,'yyyy-MM-dd') gWorkDate, substr(to_char(sysdate,'yyyy-MM-dd'),1,7) gPubYf, to_char(sysdate,'yyyy') gYear, to_char(sysdate,'MM') gMonth, to_char(sysdate,'dd') gDay, nvl(user_pass,'') gPassWord, nvl(user_level,1) gUserLevel,userid gLoginId,psid gStoreId from pub_user where usercode='%s'</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>userid</param-name>  
+    <param-value>gUserId</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>usercode</param-name>  
+    <param-value>gUserCode</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>password</param-name>  
+    <param-value>gPassWord</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>md5</param-name>  
+    <param-value>1</param-value> 
+  </context-param> 
+  <context-param> 
+    <param-name>logincode</param-name>  
+    <param-value>gLoginCode</param-value> 
+  </context-param>  
+  <context-param> 
+    <param-name>globalobject</param-name>  
+    <param-value>gUserId,gUserCode,gUserName,gpsid,gWorkDate,gPubYf,gYear,gMonth,gDay,gUserLevel,gLoginId,gStoreId</param-value> 
+  </context-param>  
+  <context-param>
+    <param-name>adminsql</param-name>
+    <param-value>select id,fun_id,fun_name from sys_funs --%s 
+	             where not nvl(pageid,' ')=' ' and '%s' like pageid||'%'</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>usersql</param-name>
+    <param-value>select c.id,c.fun_id,c.fun_name
+                             from sys_userrole a,sys_rolefun b,sys_funs c
+	             where a.user_id=%s and a.isuse=1 and b.role_id=a.role_id and b.isuse=1 and c.id=b.fid
+		       and (not nvl(c.pageid,' ')=' ') and '%s' like c.pageid||'%'</param-value>
+  </context-param>
+
+  <context-param> 
+    <param-name>osid</param-name>  
+    <param-value>201</param-value> 
+  </context-param>  
+
+  <context-param> 
+    <param-name>erpserverurl</param-name>  
+    <param-value>http://14.23.163.189:8808/y2m</param-value> 
+  </context-param>  
+
+  <context-param>
+    <param-name>gssurl</param-name>
+    <param-value>https://gssapi.synics.com.cn/</param-value>
+  </context-param>
+  <context-param> 
+    <param-name>online</param-name>  
+    <param-value>10000</param-value> 
+  </context-param>  
+  <welcome-file-list> 
+    <welcome-file>index.html</welcome-file> 
+  </welcome-file-list>  
+  <session-config> 
+    <session-timeout>60</session-timeout> 
+  </session-config>
+</web-app>
